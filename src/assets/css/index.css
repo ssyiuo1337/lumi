@@ -1,0 +1,65 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .border-bottom-custom {
+    @apply border-b;
+    border-color: rgba(255, 255, 255, 0.1); /* #FFFFFF1A */
+  }
+
+  .border-bottom-custom-adventage {
+    border: 1.2px solid #A39BD61A;
+  }
+
+  .border-bottom-custom2 {
+    border-width: 1.2px;
+    border-style: solid;
+    border-image-source: linear-gradient(180deg, #2200ff 0%, rgba(212, 205, 255, 0.5) 100%);
+    border-image-slice: 1;
+  }
+
+  .custom-border-popup {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  
+  .custom-gradient-text-title {
+    background: linear-gradient(90deg, #ffffff 0%, #D4CDFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .custom-gradient-text-title-main {
+    background: linear-gradient(90deg, #DCD7FF 0%, #c588c6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .faq-date-text {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(212, 205, 255, 0.5) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+      display: none;
+  }
+
+  html {
+      scrollbar-width: none; /* Firefox */
+  }
+
+  body {
+      overflow-y: scroll;
+  }
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    background-color: rgb(14, 12, 14);
+
+}
