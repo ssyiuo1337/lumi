@@ -1,4 +1,5 @@
 from datetime import timedelta
+import dj_database_url
 from pathlib import Path
 import os
 
@@ -17,12 +18,13 @@ SECRET_KEY = '0x4AAAAAAA5_BiyXQG1tFtQrtlWq1KcTTHA'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'euw.devtunnels.ms', 'drainwalk.tech', 'frontend', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-8000.euw.devtunnels.ms']
+ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'euw.devtunnels.ms', 'drainwalk.tech', 'frontend', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-8000.euw.devtunnels.ms', 'lumi-yue2.onrender.com']
 
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:5173',
+    'https://lumi-yue2.onrender.com',
     'https://xmcn2wj6-5173.euw.devtunnels.ms',
     'https://xmcn2wj6-8000.euw.devtunnels.ms',
     'http://127.0.0.1:3000',
@@ -59,6 +61,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://xmcn2wj6-8000.euw.devtunnels.ms",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
+    "https://lumi-yue2.onrender.com"
     "http://127.0.0.1:8000",
     "http://127.0.0.1:8000",
     "https://xmcn2wj6-5173.euw.devtunnels.ms",
@@ -118,6 +121,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:8000",
+    "https://lumi-yue2.onrender.com",
     "https://xmcn2wj6-5173.euw.devtunnels.ms",
     "https://drainwalk.tech"
 ]
@@ -147,15 +151,10 @@ WSGI_APPLICATION = 'dw_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'world',                      # Or path to database file if using sqlite3.
-        'USER': 'root',
-        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'pS7WWvTCeD3rren$'),    # Not used with sqlite3.
-        'HOST': os.environ.get('DJANGO_DB_HOST', 'localhost'),  # Используйте это значение для подключения к MySQL на том же хосте
-        'PORT': '6666',
-    }
-}
+     'default': dj_database_url.config(
+         default=os.environ.get('postgresql://yiuo:DTXc69m0H5TqwXIA3cTgnayMdoKpyzt8@dpg-cujq8kqj1k6c73d115v0-a/world_gajz')
+     )
+ }
 
 
 # Password validation
