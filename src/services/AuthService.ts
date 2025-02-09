@@ -1,7 +1,7 @@
 import httpClient from './ApiService';
 import axios, { AxiosError } from 'axios';
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api/v1';
+const API_BASE_URL = 'http://127.0.0.1:8000/api/v1'; // ЭТО СУКА ВАЖНО // ЧТОБЫ НЕ ЗАБЫТЬ
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 1000; // 1 second
 

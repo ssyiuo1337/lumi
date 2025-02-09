@@ -18,7 +18,7 @@ SECRET_KEY = '0x4AAAAAAA5_BiyXQG1tFtQrtlWq1KcTTHA'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'euw.devtunnels.ms', 'drainwalk.tech', 'frontend', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-8000.euw.devtunnels.ms', 'lumi-yue2.onrender.com']
+ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'euw.devtunnels.ms', 'drainwalk.tech', 'frontend', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-8000.euw.devtunnels.ms', 'lumi-yue2.onrender.com', 'lumi-24al.onrender.com']
 
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
