@@ -18,12 +18,14 @@ SECRET_KEY = '0x4AAAAAAA5_BiyXQG1tFtQrtlWq1KcTTHA'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'euw.devtunnels.ms', 'drainwalk.tech', 'frontend', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-8000.euw.devtunnels.ms', 'lumi-yue2.onrender.com', 'lumi-24al.onrender.com']
+ALLOWED_HOSTS = ['backend', 'localhost', '127.0.0.1', 'euw.devtunnels.ms', 'drainwalk.tech', 'frontend', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-5173.euw.devtunnels.ms', 'xmcn2wj6-8000.euw.devtunnels.ms', 'lumi-yue2.onrender.com', 'lumi-24al.onrender.com', 'projectcube.tech']
 
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:5173',
+    'https://projectcube.tech',
+    'https://lumi-24al.onrender.com',
     'https://lumi-yue2.onrender.com',
     'https://xmcn2wj6-5173.euw.devtunnels.ms',
     'https://xmcn2wj6-8000.euw.devtunnels.ms',
@@ -57,6 +59,8 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
+    "https://lumi-24al.onrender.com",
+    "https://projectcube.tech",
     "https://xmcn2wj6-5173.euw.devtunnels.ms",
     "https://xmcn2wj6-8000.euw.devtunnels.ms",
     "http://127.0.0.1:3000",
@@ -115,10 +119,12 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
+    "https://lumi-24al.onrender.com",
     "https://xmcn2wj6-5173.euw.devtunnels.ms",
     "https://xmcn2wj6-8000.euw.devtunnels.ms",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
+    "https://projectcube.tech",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:8000",
     "https://lumi-yue2.onrender.com",
