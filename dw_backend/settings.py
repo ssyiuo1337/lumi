@@ -157,11 +157,13 @@ WSGI_APPLICATION = 'dw_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-     'ENGINE': 'django.db.backends.postgresql',
-     'default': dj_database_url.config(
-         default=os.environ.get('postgresql://yiuo:DTXc69m0H5TqwXIA3cTgnayMdoKpyzt8@dpg-cujq8kqj1k6c73d115v0-a/world_gajz')
-     )
- }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',  # <-- Correct placement
+        **dj_database_url.config(
+            default=os.environ.get('postgresql://yiuo:DTXc69m0H5TqwXIA3cTgnayMdoKpyzt8@dpg-cujq8kqj1k6c73d115v0-a/world_gajz')
+        )
+    }
+}
 
 
 # Password validation
